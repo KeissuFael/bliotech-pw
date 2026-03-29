@@ -17,8 +17,6 @@ const aluno = {
     dataDevolucao: document.getElementById("dataRetorno")
 }
 
-const turmaSel = aluno.turma.options[aluno.turma.selectedIndex].value
-
 form.addEventListener("submit", (event) => {
     event.preventDefault()
 
@@ -45,6 +43,8 @@ form.addEventListener("submit", (event) => {
     const check = document.createElement("input")
     check.type = "checkbox"
     check.classList.add("checkItem")
+
+    const turmaSel = aluno.turma.options[aluno.turma.selectedIndex].value
 
     item.appendChild(check)
 
