@@ -49,9 +49,9 @@ form.addEventListener("submit", (event) => {
     item.appendChild(check)
 
     item.innerHTML +=
-        " Livro: " + livro.nome.value + "\n"
-        "  Aluno: " + aluno.nomeAluno.value + aluno.serie.value + turmaSel + "\n"
-        "  Retirado: " + aluno.dataColeta.value + "\n"
+        " Livro: " + livro.nome.value +
+        "  Aluno: " + aluno.nomeAluno.value + aluno.serie.value + turmaSel +
+        "  Retirado: " + aluno.dataColeta.value +
         "  Devolução: " + aluno.dataDevolucao.value 
 
     lista.appendChild(item)
