@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Bibliotech</title>
 </head>
-
 <body>
     <div class="container">
-            <div class="card">
-            <!--LEMBRA SEU ANIMAL, textField so pra texto de escrever-->
-            <!--Mudar o nome dessa variavel depois-->
+        <div class="card">
             <div class="infoLivro">
                 <h2>Informação do Livro</h2>
                 <form id="formPrincipal">
@@ -21,55 +17,54 @@
                         <input type="text" id="nome" placeholder="Digite o Titulo do Livro" required>
                     </div>
                     <div class="selecaoDoGenero">
-                    <label>Gênero</label>
-                    <select id="genero">
-                        <option value="romance">Romance</option>
-                        <option value="fantasia">Fantasia</option>
-                        <option value="ficcaoCientifica">Ficção Científica</option>
-                        <option value="suspense">Suspense</option>
-                        <option value="terror">Terror</option>
-                        <option value="biografia">Biografia</option>
-                        <option value="poesia">Poesia</option>
-                        <option value="autoAjuda">Autoajuda</option>
-                    </select>
-
-                </div>
+                        <label>Gênero</label>
+                        <select id="genero">
+                            <option value="romance">Romance</option>
+                            <option value="fantasia">Fantasia</option>
+                            <option value="ficcaoCientifica">Ficção Científica</option>
+                            <option value="suspense">Suspense</option>
+                            <option value="terror">Terror</option>
+                            <option value="biografia">Biografia</option>
+                            <option value="poesia">Poesia</option>
+                            <option value="autoAjuda">Autoajuda</option>
+                        </select>
+                    </div>
             </div>
             <div class="infoAluno">
                 <h2>Informação do Aluno</h2>
 
-                        <div class="textField">
-                        <label>Nome do aluno</label>
-                        <input type="text" id="nomeAluno" placeholder="Digite o nome do Aluno" required>
-                    </div>
-                    <div class="selecaoDaTurma">
-                        <div class="linha">
+                <div class="textField">
+                    <label>Nome do aluno</label>
+                    <input type="text" id="nomeAluno" placeholder="Digite o nome do Aluno" required>
+                </div>
+                <div class="selecaoDaTurma">
+                    <div class="linha">
                         <label>Série</label>
                         <select id="serie">
                             <option value="primeiraSerie">1°</option>
                             <option value="segundaSerie">2°</option>
                             <option value="terceiraSerie">3°</option>
                         </select>
-                    
+
                         <label>Turma</label>
                         <select id="turma">
                             <option value="turmaA">A</option>
                             <option value="turmaB">B</option>
                             <option value="turmaC">C</option>
                         </select>
-                        </div>
-                        <div class="datas">
+                    </div>
+                    <div class="datas">
                         <label>Data da coleta</label>
-                        <input type="datetime" id="data">
+                        <input type="date" id="data">
                         <label>Data de Devolução</label>
-                        <input type="datetime" id="dataRetorno">
+                        <input type="date" id="dataRetorno">
                         <button type="submit" class="enviar" id="enviar">Enviar</button>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
-            </div>
-            <div class="card">
+        </div>
+        <div class="card">
             <div class="listaAgendamento">
                 <h3 class="tituloLista">Lista de Agendamento</h3>
                 <ul class="lista" id="lista">
@@ -77,10 +72,9 @@
             </div>
             <button id="apagar">Apagar selecionados</button>
         </div>
-        </div>
+    </div>
     </div>
     </div>
     <script src="./src/js/script.js"></script>
 </body>
-
 </html>
