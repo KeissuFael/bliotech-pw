@@ -9,12 +9,18 @@ const livro = {
     genero: document.getElementById("genero")
 }
 
+const datas = {
+    dataColeta: document.getElementById("data"),
+    dataDevolucao: document.getElementById("dataRetorno"),
+}
+
+
+
 const aluno = {
     nomeAluno: document.getElementById("nomeAluno"),
     serie: document.getElementById("serie"),
     turma: document.getElementById("turma"),
-    dataColeta: document.getElementById("data"),
-    dataDevolucao: document.getElementById("dataRetorno")
+    
 }
 
 form.addEventListener("submit", (event) => {
@@ -23,8 +29,8 @@ form.addEventListener("submit", (event) => {
     if (
         livro.nome.value === "" ||
         aluno.nomeAluno.value === "" ||
-        aluno.dataColeta.value === "" ||
-        aluno.dataDevolucao.value === ""
+        datas.dataColeta.value === "" ||
+        datas.dataDevolucao.value === ""
     ) {
         alert("Forneça todas as informações para enviar.")
         return
@@ -44,15 +50,16 @@ form.addEventListener("submit", (event) => {
     check.type = "checkbox"
     check.classList.add("checkItem")
 
-    const turmaSel = aluno.turma.options[aluno.turma.selectedIndex].value
-
     item.appendChild(check)
 
     item.innerHTML +=
         " Livro: " + livro.nome.value +
-        "  Aluno: " + aluno.nomeAluno.value + aluno.serie.value + turmaSel +
-        "  Retirado: " + aluno.dataColeta.value +
-        "  Devolução: " + aluno.dataDevolucao.value 
+        "<br>" +
+        "  Aluno: " + aluno.nomeAluno.value +
+        "<br>" +
+        "  Retirado: " + new Date(datas.dataColeta.value).toLocaleDateString("pt-BR") +
+        "<br>" +
+        "  Devolução: " + new Date(datas.dataDevolucao.value).toLocaleDateString("pt-BR")
 
     lista.appendChild(item)
 
