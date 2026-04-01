@@ -127,10 +127,7 @@ select {
 .linha > * {
     flex: 1;
 }
-    
-[class^='itemLista'] {
-    
-}
+
 
 .lista > li > p {
     font-size: 14px;
